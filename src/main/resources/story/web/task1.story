@@ -1,14 +1,27 @@
 Description: Sort list from Your Watchlist and export it with valid steps 
 
-Scenario: Open IMDb page
-Given I am on the main application page
-Then the page title is equal to 'IMDb: Ratings, Reviews, and Where to Watch the Best Movies & TV Shows'
+Scenario: registration via navbar
+Given I am on a page with the URL 'https://www.imdb.com/'
+When I click on element located `By.xpath(//div[text()="Sign In"])`
+When I click on element located `By.xpath(//span[text()="Sign in with IMDb"])`
+When I enter `nikaushakova4@gmail.com` in field located `By.xpath(//input[@id='ap_email'])`
+When I enter `1234qwer` in field located `By.xpath(//input[@id='ap_password'])`
+When I click on element located `By.xpath(//input[@id='signInSubmit'])`
+When I enter `Lucifer` in field located `By.xpath(//input[@id='suggestion-search'])`
+When I click on element located `By.xpath(//button[@id='suggestion-search-button'])`
+When I click on element located `By.xpath(//[text()="Lucifer"])`
+When I click on element located `By.xpath(//div[text()='Add to Watchlist'])`
 
-Scenario: Login to the IMDb
-Given I am on the main application page
-When I click on element located `locator`
-
-
-When I enter `$userEmail` in field located `By.xpath(//[])`
-When I enter `$userPass` in field located `By.xpath(//[])`
-
+Scenario: registration via navbar
+Given I am on a page with the URL 'https://www.imdb.com/'
+When I click on element located `By.xpath(//span[text()="nika"])`
+When I click on element located `By.xpath(//span[text()="Sign out"])`
+When I click on element located `By.xpath(//div[text()="Sign in to IMDb"])`
+When I click on element located `By.xpath(//span[text()="Sign in with IMDb"])`
+When I enter `nikaushakova4@gmail.com` in field located `By.xpath(//input[@id='ap_email'])`
+When I enter `1234qwer` in field located `By.xpath(//input[@id='ap_password'])`
+When I click on element located `By.xpath(//input[@id='signInSubmit'])`
+When I enter `Lucifer` in field located `By.xpath(//input[@id='suggestion-search'])`
+When I click on element located `By.xpath(//button[@id='suggestion-search-button'])`
+When I click on element located `By.xpath(//[text()="Lucifer"])`
+When I click on element located `By.xpath(//div[text()='Add to Watchlist'])`
